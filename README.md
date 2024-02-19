@@ -5,3 +5,4 @@ Implementing Ethernet mac on Virtex-6 FPGA. This contains the opensource resourc
 ### Opencore resources
 [Freecores](https://freecores.github.io/) is project that contains all the projects from the [Opencores](opencores.org).
 
+I will start with [ethamc](https://github.com/freecores/ethmac) from opencores which can support 10/100Mbps.
