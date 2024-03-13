@@ -52,16 +52,13 @@ b'\x00\x00^\x00\x01\x01\x14\x133\xd7\xd5%\x08\x00E\x00\x006\x00\x01\x00\x00@\x06
 | RGMII | Jumper over pins 1-2 | No jumper | Jumper on |
 
 ## Ethernet PHY connections
-| U1 FPGA Pin | Schematic Net Name |
-| ----------- | ------------------ |
-|AN14 |PHY_MDIO| 
-|AP14| PHY_MDC| 
-|AH14| PHY_INT| 
-|AH13| PHY_RESET| 
-|AL13| PHY_CRS| 
-|AK13 |PHY_COL| 
-|AP11| PHY_RXCLK |
-|AG12 |PHY_RXER|
+| U1 FPGA Pin | Schematic Net Name | Net in model |
+| ----------- | ------------------ | ------------ |
+|AH13| PHY_RESET|  |
+|AL13| PHY_CRS| MII_CRS |
+|AK13 |PHY_COL| MII_COL |
+|AP11| PHY_RXCLK | MII_RX_CLK |
+|AG12 |PHY_RXER| MII
 |AM13| PHY_RXCTL_RXDV| 
 |AN13| PHY_RXD0| 
 |AF14| PHY_RXD1 |
