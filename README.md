@@ -42,3 +42,35 @@ b'\x00\x00^\x00\x01\x01\x14\x133\xd7\xd5%\x08\x00E\x00\x006\x00\x01\x00\x00@\x06
 >>> c
 <Ether  dst=00:00:5e:00:01:01 src=14:13:33:d7:d5:25 type=IPv4 |<IP  version=4 ihl=5 tos=0x0 len=54 id=1 flags= frag=0 ttl=64 proto=tcp chksum=0xef66 src=192.168.5.1 dst=192.168.5.9 |<TCP  sport=ftp_data dport=http seq=0 ack=0 dataofs=5 reserved=0 flags=S window=8192 chksum=0x63f8 urgptr=0 |<Raw  load='Hello world..!' |>>>>
 ```
+
+## PHY Default Interface Mode
+
+| Mode | J66 | J67 | J68 |
+| ------------- | ------------ | ----------- | ----------- | 
+|GMII/MII to copper (default) | Jumper over pins 1-2 | Jumper over pins 1-2 | No jumper |
+|SGMII to copper,no clock | Jumper over pins 2-3 | Jumper over pins 2-3 | No jumper |
+| RGMII | Jumper over pins 1-2 | No jumper | Jumper on |
+
+## Ethernet PHY connections
+| U1 FPGA Pin | Schematic Net Name |
+| ----------- | ------------------ |
+|AN14 |PHY_MDIO| 
+|AP14| PHY_MDC| 
+|AH14| PHY_INT| 
+|AH13| PHY_RESET| 
+|AL13| PHY_CRS| 
+|AK13 |PHY_COL| 
+|AP11| PHY_RXCLK |
+|AG12 |PHY_RXER|
+|AM13| PHY_RXCTL_RXDV| 
+|AN13| PHY_RXD0| 
+|AF14| PHY_RXD1 |
+|AE14| PHY_RXD2 |
+|AN12| PHY_RXD3| 
+|AD12| PHY_TXCLK| 
+|AH10| PHY_TXER| 
+|AJ10 |PHY_TXCTL_TXEN| 
+|AM11| PHY_TXD0 |
+|AL11| PHY_TXD1| 
+|AG10| PHY_TXD2| 
+|AG11| PHY_TXD3|
