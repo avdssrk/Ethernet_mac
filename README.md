@@ -11,7 +11,7 @@ I will start with [ethamc](https://github.com/freecores/ethmac) from opencores w
 ### Finding the MAC address
 In windows type the following in cmd and find the appropriate MAC address.
 ```
-ipconfig \all
+ipconfig /all
 ```
 **MAC address** of the FPGA is mentioned over it.
 
