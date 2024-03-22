@@ -77,5 +77,9 @@ b'\x00\x00^\x00\x01\x01\x14\x133\xd7\xd5%\x08\x00E\x00\x006\x00\x01\x00\x00@\x06
 py -m scapy
 ```
 
-###
+### Send data from pc to fpga
+```
+x=Ether(src = "34:60:F9:27:E8:09",dst = "00:0A:35:02:DC:C5")/IP(src="192.168.56.1", dst="192.168.56.2")/UDP(dport=54321,sport=15293)/Raw(load="Hello world.. Sending data to check the transmission. Please acknowledge this message. Thank you.")
+sendp(x,count=10)
+```
 
