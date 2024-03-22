@@ -71,3 +71,11 @@ b'\x00\x00^\x00\x01\x01\x14\x133\xd7\xd5%\x08\x00E\x00\x006\x00\x01\x00\x00@\x06
 |AL11| PHY_TXD1| MII_TXD[1] |
 |AG10| PHY_TXD2| MII_TXD[2] |
 |AG11| PHY_TXD3| MII_TXD[3] |
+
+## Run scapy on windows 7
+```
+py -m scapy
+```
+
+###
+
